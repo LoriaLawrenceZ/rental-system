@@ -18,9 +18,9 @@ const RentalList = () => {
   };
 
   return (
-    <div>
-      <h2>Rental List</h2>
-      <table>
+    <div className="rental-list">
+      <h2 className="rental-list-title">Rental List</h2>
+      <table className="rental-list-table">
         <thead>
           <tr>
             <th>ID</th>

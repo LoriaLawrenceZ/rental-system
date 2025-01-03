@@ -1,0 +1,45 @@
+body {
+  background-color: #f0f8ff;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.rental-list, .user-list, .woman-list {
+  background-color: #ffccff;
+  border: 2px solid #ff99cc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rental-list-title, .user-list-title, .woman-list-title {
+  color: #ff66b2;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.rental-list-table, .user-list-table, .woman-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rental-list-table th, .user-list-table th, .woman-list-table th,
+.rental-list-table td, .user-list-table td, .woman-list-table td {
+  border: 1px solid #ff99cc;
+  padding: 10px;
+  text-align: center;
+}
+
+.rental-list-table th, .user-list-table th, .woman-list-table th {
+  background-color: #ffccff;
+  color: #ff66b2;
+}
+
+.rental-list-table tr:nth-child(even), .user-list-table tr:nth-child(even), .woman-list-table tr:nth-child(even) {
+  background-color: #ffe6f2;
+}
+
+.rental-list-table tr:hover, .user-list-table tr:hover, .woman-list-table tr:hover {
+  background-color: #ffb3d9;
+}

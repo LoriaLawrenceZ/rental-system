@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import RentalList from './components/RentalList';
 import UserList from './components/UserList';
 import WomanList from './components/WomanList';
+import './styles.css';
 
 function App() {
   return (

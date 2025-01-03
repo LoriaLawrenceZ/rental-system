@@ -18,9 +18,9 @@ const WomanList = () => {
   };
 
   return (
-    <div>
-      <h2>Woman List</h2>
-      <table>
+    <div className="woman-list">
+      <h2 className="woman-list-title">Woman List</h2>
+      <table className="woman-list-table">
         <thead>
           <tr>
             <th>ID</th>
