@@ -41,6 +41,25 @@ The back end will be running at `http://localhost:8080`.
 
 The front end will be running at `http://localhost:3000`.
 
+## Deploying the Front End on Vercel
+
+1. Install the Vercel CLI by running the following command:
+   ```
+   npm install -g vercel
+   ```
+2. Navigate to the `frontend` directory.
+3. Run the following command to deploy the front end:
+   ```
+   vercel
+   ```
+4. Follow the prompts to complete the deployment.
+
+The front end will be deployed on Vercel and accessible via the generated URL.
+
+![Deployment](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
+
+![Sample Image](https://via.placeholder.com/150)
+
 ## API Endpoints
 
 ### Rentals
