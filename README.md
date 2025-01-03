@@ -12,6 +12,7 @@ This repository contains a rental service application with a Java back end and a
 
 1. Install PostgreSQL and create a database named `rentaldb`.
 2. Update the database configuration in `src/main/resources/application.properties` with your PostgreSQL username and password.
+3. Run the SQL script located at `src/main/resources/db/migration/V1__create_rentaldb.sql` to create the database schema.
 
 ## Running the Back End
 
