@@ -7,16 +7,20 @@
       "config": {
         "distDir": "frontend/build"
       }
+    },
+    {
+      "src": "src/main/java/com/rental/Main.java",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/frontend/public/index.html"
     }
-  ],
-  "env": {
-    "REACT_APP_SUPABASE_ANON_KEY": "@react_app_supabase_anon_key",
-    "REACT_APP_SUPABASE_URL": "@react_app_supabase_url"
-  }
+  ]
 }
