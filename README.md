@@ -58,8 +58,6 @@ The front end will be deployed on Vercel and accessible via the generated URL.
 
 ![Deployment](https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif)
 
-![Sample Image](https://via.placeholder.com/150)
-
 ## API Endpoints
 
 ### Rentals
