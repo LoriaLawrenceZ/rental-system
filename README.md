@@ -34,7 +34,11 @@ The back end will be running at `http://localhost:8080`.
    ```
    npm install
    ```
-3. Run the following command to start the front end:
+3. Before running the build command, set the `NODE_OPTIONS` environment variable:
+   ```
+   export NODE_OPTIONS=--openssl-legacy-provider
+   ```
+4. Run the following command to start the front end:
    ```
    npm start
    ```
