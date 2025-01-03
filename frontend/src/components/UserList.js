@@ -1,14 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import UserService from '../services/UserService';
+import supabase from '../services/SupabaseService';
 
 const UserList = () => {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    UserService.getUsers().then((response) => {
-      setUsers(response.data);
-    });
+    fetchUsers();
   }, []);
+
+  const fetchUsers = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('users')
+        .select('*');
+      if (error) {
+        throw error;
+      }
+      setUsers(data);
+    } catch (error) {
+      console.error('Error fetching users:', error);
+    }
+  };
 
   return (
     <div className="user-list">

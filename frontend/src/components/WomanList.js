@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import WomanService from '../services/WomanService';
+import supabase from '../services/SupabaseService';
 
 const WomanList = () => {
   const [women, setWomen] = useState([]);
@@ -10,8 +10,13 @@ const WomanList = () => {
 
   const fetchWomen = async () => {
     try {
-      const response = await WomanService.getAllWomen();
-      setWomen(response.data);
+      const { data, error } = await supabase
+        .from('women')
+        .select('*');
+      if (error) {
+        throw error;
+      }
+      setWomen(data);
     } catch (error) {
       console.error('Error fetching women:', error);
     }

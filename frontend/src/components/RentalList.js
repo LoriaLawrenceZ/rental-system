@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import RentalService from '../services/RentalService';
+import supabase from '../services/SupabaseService';
 
 const RentalList = () => {
   const [rentals, setRentals] = useState([]);
@@ -10,8 +10,13 @@ const RentalList = () => {
 
   const fetchRentals = async () => {
     try {
-      const response = await RentalService.getAllRentals();
-      setRentals(response.data);
+      const { data, error } = await supabase
+        .from('rentals')
+        .select('*');
+      if (error) {
+        throw error;
+      }
+      setRentals(data);
     } catch (error) {
       console.error('Error fetching rentals:', error);
     }
