@@ -11,9 +11,9 @@ const UserList = () => {
   }, []);
 
   return (
-    <div>
-      <h2>User List</h2>
-      <table>
+    <div className="user-list">
+      <h2 className="user-list-title">User List</h2>
+      <table className="user-list-table">
         <thead>
           <tr>
             <th>ID</th>
