@@ -5,12 +5,8 @@
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "frontend/build"
+        "distDir": "build"
       }
-    },
-    {
-      "src": "src/main/java/com/rental/Main.java",
-      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -20,7 +16,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/public/index.html"
+      "dest": "/build/index.html"
     }
   ]
 }
