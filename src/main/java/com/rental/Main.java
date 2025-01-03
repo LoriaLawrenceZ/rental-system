@@ -53,6 +53,11 @@ public class Main {
         System.out.print("Enter User Email: ");
         String userEmail = scanner.nextLine();
 
+        if (!User.isValidEmail(userEmail)) {
+            System.out.println("Invalid email format. Please try again.");
+            return;
+        }
+
         User user = new User();
         user.setId(userId);
         user.setName(userName);
@@ -99,6 +104,11 @@ public class Main {
         String userName = scanner.nextLine();
         System.out.print("Enter new User Email: ");
         String userEmail = scanner.nextLine();
+
+        if (!User.isValidEmail(userEmail)) {
+            System.out.println("Invalid email format. Please try again.");
+            return;
+        }
 
         User user = new User();
         user.setId(userId);
