@@ -14,5 +14,9 @@
       "src": "/(.*)",
       "dest": "/frontend/public/index.html"
     }
-  ]
+  ],
+  "env": {
+    "REACT_APP_SUPABASE_ANON_KEY": "@react_app_supabase_anon_key",
+    "REACT_APP_SUPABASE_URL": "@react_app_supabase_url"
+  }
 }
